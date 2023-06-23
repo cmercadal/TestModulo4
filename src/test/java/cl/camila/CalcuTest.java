@@ -1,16 +1,15 @@
 package cl.camila;
 
-import cl.camila.Calculadora;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 
 import java.util.logging.Logger;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
-public class CalculadoraTest {
+public class CalcuTest {
 
     private static Calculadora calculadora = mock(Calculadora.class);
     private static Logger logger = Logger.getLogger("cl.camila");
