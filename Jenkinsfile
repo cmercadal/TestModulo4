@@ -31,7 +31,7 @@ pipeline {
 
         stage("Test maven"){
             steps{
-                sh "mvn test"
+                sh "mvn test cobertura:cobertura"
             }
         }
 
