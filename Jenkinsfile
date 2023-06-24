@@ -36,6 +36,11 @@ pipeline {
             steps{
                 sh /Applications/SoapUI-5.7.0.app/Contents/java/app/bin/testrunner.sh -r -a -j -flogs /Users/camila/Desktop/DevOps_Tareas/REST-Project-2-soapui-project.xml
             }
+
+            steps{
+                sh cd /Users/camila/Desktop/DevOps_Tareas/apache-jmeter-5.5/bin
+                sh ./jmeter.sh -Jjmeter.save.saveservice.output_format=xml -n -t "/Users/camila/Desktop/DevOps_Tareas/apache-jmeter-5.5/PruebaM4.jmx" -l ./log/csvBlaze.jtl
+            }
         }
 
 
