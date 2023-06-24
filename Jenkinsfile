@@ -31,7 +31,7 @@ pipeline {
 
         stage("Test"){
             steps{
-                sh "mvn test cobertura:cobertura"
+                sh "mvn test"
             }
             steps{
                 sh /Applications/SoapUI-5.7.0.app/Contents/java/app/bin/testrunner.sh -r -a -j -flogs /Users/camila/Desktop/DevOps_Tareas/REST-Project-2-soapui-project.xml
